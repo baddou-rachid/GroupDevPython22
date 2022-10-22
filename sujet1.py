@@ -24,7 +24,7 @@ for i in range(n,m+1) :
         c=0
     else:
         c=0
-print("Au revoir si l'éran est vide alors n'existe pas desolez")
+print("Au revoir si l'éran est vide alors n'existe pas desolez SALUT")
 
 
 
