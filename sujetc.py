@@ -1,43 +1,27 @@
-bi = 10
-bs= 1
-while bi>bs :
-    bi = int(input("Donner un nombre supperieur a 10: "))
-    bs = int(input("Donner un nombre inferieur ou egal a 500: "))
-for i in range(bi,bs+1):
-    c=0
-    for j in range(1,i+1):
-        if i % j == 0 :
-            c=c+1
-    m=i
-    s=0
-    if c == 2 and i<100:
-        q=1
-        while q != 0:
-            q = m//10
-            r=m % 10
-            s=s*10 + r
-            m = q
-        k=0
-        for j in range(1,s+1):
-            if s%j == 0:
-                k=k+1
-        if k==2 :
-            print(i)
-    elif c == 2 and i>=100:
-        ch = str(i)
-        cir1 = ch[1]+ch[2]+ch[0]
-        cir2 = ch[2]+ch[0]+ch[1]
-        a = int(cir1)
-        b = int(cir2)
-        x=0
-        for l in range(1,a+1):
-            if a % l == 0:
-                x=x+1
-        for l in range(1,b+1):
-            if b % l == 0:
-                x=x+1
-        if x == 4:
-            print(i)
-            
-        
-    
+print("********SujetC*********")
+n = 0
+#Saisir un nombre superieur a 0
+while n<=0:
+    n = int(input("Donner un nombre sup a 0: "))
+m=n
+s=0
+i=0
+q=n
+while True :
+    i=i+1
+    q = n//10
+    r = n % 10 
+    if i == 1:
+        l=r    #Conserver le premier reste pour la multiplication
+    s = s*10+r #determiner le symetrique de i
+    n = q
+    if q==0:
+        break
+if s == m and s == m*l : #Verifier si le symetrique egal le nombre saisi n et egal la multiplication de n a le premier reste l
+    print(f"{m} est un entier propre et symetrique")
+elif s==m : #Verifier si le symetrique egal le nombre saisi n 
+    print(f"{m} est un entier symetrique")
+elif s == m*l: #Verifier si la multiplication de n a le premier reste l = le symetrique s
+    print(f"{m} est un entier propre")
+else: #si le nombre ni symetrique ni propre
+    print(f"{m} ni symetrique ni propre")
