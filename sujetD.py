@@ -50,7 +50,7 @@ for i in range(bi,bs+1):
             if b % l == 0:
                 x=x+1
         if x == 4:
-            print(i) # Afficher le nombre i si les deux nombres a et b sont premier
+            print(i) # Afficher le nombre i si les deux nombres a et b sont premiers
             
         
     
